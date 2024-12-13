@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+<header class="header">
+    <h1>Finance Manager</h1>
+    <h1>
+        Добро пожаловать,
+        <span id="user-name"></span>
+    </h1>
+    <button id="logout" class="btn">Выйти</button>
+</header>
+<main class="main-content">
+
+    <section class="add-transaction-section">
+        <canvas id="circle" width="200" height="200"></canvas>
+        <h2>Добавить операцию</h2>
+        <form id="transaction-form" class="transaction-form">
+            <div class="form-group">
+                <label for="amount">Сумма</label>
+                <input type="number" step="0.1" name="amount" id="amount" placeholder="Введите сумму" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Вид операции</label>
+                <select name="type" id="type" required>
+                    <option value="Доход">Доход</option>
+                    <option value="Расход">Расход</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="category">Категория</label>
+                <select name="category" id="category" required>
+                    <optgroup label="Расходы">
+                        <option value="Продукты питания">Продукты питания</option>
+                        <option value="Коммунальные услуги">Коммунальные услуги</option>
+                        <option value="Транспорт">Транспорт</option>
+                        <option value="Развлечения">Развлечения</option>
+                        <option value="Одежда и обувь">Одежда и обувь</option>
+                        <option value="Здоровье и медицина">Здоровье и медицина</option>
+                        <option value="Образование">Образование</option>
+                        <option value="Кафе и рестораны">Кафе и рестораны</option>
+                        <option value="Косметика и парикмахерские услуги">Косметика и парикмахерские услуги</option>
+                        <option value="Домашние расходы">Домашние расходы</option>
+                        <option value="Путешествия">Путешествия</option>
+                        <option value="Спорт и фитнес">Спорт и фитнес</option>
+                        <option value="Техника и электроника">Техника и электроника</option>
+                        <option value="Подарки и благотворительность">Подарки и благотворительность</option>
+                        <option value="Страхование">Страхование</option>
+                    </optgroup>
+                    <optgroup label="Доходы">
+                        <option value="Зарплата">Зарплата</option>
+                        <option value="Премии и бонусы">Премии и бонусы</option>
+                        <option value="Дивиденды">Дивиденды</option>
+                        <option value="Подарки">Подарки</option>
+                        <option value="Возврат долгов">Возврат долгов</option>
+                        <option value="Продажа имущества">Продажа имущества</option>
+                        <option value="Инвестиции">Инвестиции</option>
+                        <option value="Фриланс и подработка">Фриланс и подработка</option>
+                        <option value="Государственные пособия">Государственные пособия</option>
+                        <option value="Проценты по вкладамПроценты по вкладам">Проценты по вкладам</option>
+                        <option value="Наследство">Наследство</option>
+                        <option value="Возврат налогов">Возврат налогов</option>
+                        <option value="Стипендии">Стипендии</option>
+                        <option value="Доход от аренды">Доход от аренды</option>
+                        <option value="Прочие доходы">Прочие доходы</option>
+                    </optgroup>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="description">Комментарий</label>
+                <textarea name="description" id="description" placeholder="Введите комментарий (не обязательно)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Дата</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <button type="submit" class="btn">Add Transaction</button>
+        </form>
+    </section>
+    <section class="transaction-display">
+        <h2>История</h2>
+        <table id="transaction-table">
+            <thead>
+                <tr>
+                    <th>Сумма</th>
+                    <th>Вид операции</th>
+                    <th>Категория</th>
+                    <th>Комментарий</th>
+                    <th>Дата</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list">
+                <!-- Transactions will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+</main>
+<script src="../static/js/index.js"></script>
+</body>
+</html>

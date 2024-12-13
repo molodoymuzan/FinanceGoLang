@@ -1,0 +1,209 @@
+/* static/css/styles.css */
+
+:root {
+    --primary-color: #4caf50; /* Green */
+    --secondary-color: #f5f5f5; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow */
+    --border-radius: 10px; /* Border Radius */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    height: 60px;
+    box-shadow: 0 10px 10px var(--shadow-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header .btn{
+    box-shadow: 0 0 30px 5px var(--shadow-color);
+    font-size: 1rem;
+}
+
+.main-content {
+    max-width: 1400px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+section{
+    padding: 20px;
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-color);
+
+    min-width: 400px;
+}
+
+
+
+
+
+
+
+.month-display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#circle{
+    display: block;
+    margin: auto;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+.transaction-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus and hover */
+}
+
+/*input[type="number"],*/
+/*input[type="text"],*/
+/*input[type="date"],*/
+/*select,*/
+/*textarea {*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: var(--border-radius);*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+
+input[type="date"] {
+    background-color: #f9f9f9; /* Light background color */
+    color: var(--text-color); /* Text color */
+}
+
+/* Change border color on focus */
+input[type="date"]:focus {
+    border-color: #007bff; /* Change to a blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+    outline: none; /* Remove default outline */
+}
+
+/* Change border color on hover */
+input[type="date"]:hover {
+    border-color: #007bff; /* Change to a blue border on hover */
+}
+
+/* Style for placeholder text */
+input[type="date"]::placeholder {
+    color: #aaa; /* Light gray color for placeholder */
+}
+
+/* Optional: Style for the date picker icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('path/to/your/icon.svg') no-repeat center; /* Custom icon */
+    background-size: 16px; /* Size of the icon */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    padding: 10px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #388e3c; /* Darker shade of green for hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.transaction-display {
+    min-width: 540px;
+}
+
+.transaction-display table {
+    border-collapse: collapse;
+}
+
+.transaction-display th, .transaction-display td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Border for table cells */
+    text-align: left; /* Align text to the left */
+}
+
+.transaction-display th {
+    background-color: var(--primary-color); /* Header background color */
+    color: #ffffff; /* Header text color */
+}
+
+.transaction-display tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for even rows */
+}
+
+.transaction-display tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}

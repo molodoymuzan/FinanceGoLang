@@ -1,0 +1,77 @@
+/*static/css/styles.css*/
+
+:root {
+    --primary-color: #4caf50; /* Green */
+    --secondary-color: #f5f5f5; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow */
+    --border-radius: 10px; /* Border Radius */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    height: 60px;
+    box-shadow: 0 10px 10px var(--shadow-color);
+
+    font-size: 1.5rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+button {
+    padding: 10px;
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #388e3c; /* Darker shade of green for hover effect */
+}
+
+a {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
